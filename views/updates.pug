@@ -1,0 +1,21 @@
+doctype html
+html 
+    head 
+        title= `${title}`
+        meta(name="viewport" content="width=device-width, initial-scale=1")
+        link(rel="stylesheet", href="/css/style.css")
+    body
+        h1 Table of pets in Hubspot
+        p 
+        a(href="/update-cobj") Create a new pet in Hubspot
+        p 
+        table
+            tr
+                th Name 
+                th Bio 
+                th Type
+            each pet in pets 
+                tr 
+                    td #{pet.name}  
+                    td #{pet.gender}  
+                    td #{pet.age}                    
