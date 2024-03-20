@@ -4,18 +4,16 @@ html
         title= `${title}`
         meta(name="viewport" content="width=device-width, initial-scale=1")
         link(rel="stylesheet", href="/css/style.css")
-    body
-        h1 Table of pets in Hubspot
-        p 
-        a(href="/update-cobj") Create a new pet in Hubspot
-        p 
-        table
-            tr
-                th Name 
-                th Bio 
-                th Type
-            each pet in pets 
-                tr 
-                    td #{pet.name}  
-                    td #{pet.gender}  
-                    td #{pet.age}                    
+        body
+            h1 Create a new Animal in Hubspot
+            a(href="/") Return to the homepage
+            p
+                form( action="/update-cobj" method="post")
+                    input(type="text", name="name", value="", placeholder="pet Name")
+                    br
+                    input(type="text", name="gender", value="", placeholder="pet gender")
+                    br
+                    input(type="text", name="age", value="", placeholder="pet age")
+                    br
+                    p 
+                    input(type="submit" value="Create a new pet")
